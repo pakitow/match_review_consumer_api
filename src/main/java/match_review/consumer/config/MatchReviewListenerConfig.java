@@ -42,14 +42,14 @@ public class MatchReviewListenerConfig {
         /* group id */
         prop.put(ConsumerConfig.GROUP_ID_CONFIG, group_id);
         /* fetching wait and timeout */
-        prop.put(ConsumerConfig.REQUEST_TIMEOUT_MS_CONFIG, 500000);
-        prop.put(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG, 300000);
+        prop.put(ConsumerConfig.REQUEST_TIMEOUT_MS_CONFIG, 500000); /* testing ~ former: 500k */
+        prop.put(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG,300000); /* testing ~ former: 300k */
         /* fetching byte sizing + polling */
         prop.put(ConsumerConfig.FETCH_MIN_BYTES_CONFIG, 1000000);
         prop.put(ConsumerConfig.FETCH_MAX_BYTES_CONFIG, 10000000);
         prop.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "100");
         /* deserialize */
-        prop.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);        
+        prop.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);       
         prop.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         return prop;
     }
